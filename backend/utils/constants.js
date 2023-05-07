@@ -4,9 +4,10 @@ const REGEXP_URL = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9
 const allowedCors = [
   'http://stankena-mesto.nomoredomains.monster',
   'https://stankena-mesto.nomoredomains.monster',
-  'https://api.stankena-mesto.nomoredomains.monster',
+  'http://api.stankena-mesto.nomoredomains.monster',
   'https://api.stankena-mesto.nomoredomains.monster',
   'localhost:3000',
+  'http://localhost:3000',
 ];
 
 module.exports = {
