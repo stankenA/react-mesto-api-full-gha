@@ -85,7 +85,6 @@ class Api {
 export const api = new Api({
   url: 'http://api.stankena-mesto.nomoredomains.monster',
   headers: {
-    'Content-Type': 'application/json',
-    authorization: 'ebcc8864-4ebe-4d94-adc1-0ab4457f09d1'
+    'Content-Type': 'application/json'
   }
 })
