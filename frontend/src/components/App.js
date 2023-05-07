@@ -50,17 +50,19 @@ function App() {
   // записываем их значения в стейт-переменные
 
   useEffect(() => {
-    api.receiveUserInfo()
-      .then((userData) => {
-        setCurrentUser(userData);
-      })
-      .catch(err => console.log(err));
-    api.getInitialCards()
-      .then((cardsData) => {
-        setCards(cardsData)
-      })
-      .catch(err => console.log(err));
-  }, [])
+    if (loggedIn) {
+      api.receiveUserInfo()
+        .then((userData) => {
+          setCurrentUser(userData);
+        })
+        .catch(err => console.log(err));
+      api.getInitialCards()
+        .then((cardsData) => {
+          setCards(cardsData)
+        })
+        .catch(err => console.log(err));
+    }
+  }, [loggedIn])
 
   // Проверка токена пользователя
   function handleTokenCheck() {
