@@ -1,0 +1,17 @@
+.page {
+  margin: 0 auto;
+  background-color: #000;
+  color: #fff;
+  font-family: Inter, Arial, sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  --content-width: 918px;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 450px) {
+  .page {
+    padding-bottom: 143px;
+  }
+}

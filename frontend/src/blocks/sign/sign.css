@@ -1,0 +1,13 @@
+.sign {
+  width: 358px;
+  margin: 60px auto 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 450px) {
+  .sign {
+    width: 90%;
+  }
+}

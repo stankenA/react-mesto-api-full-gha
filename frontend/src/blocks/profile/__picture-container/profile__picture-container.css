@@ -1,0 +1,30 @@
+.profile__picture-container {
+  position: relative;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.profile__picture-container::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50px;
+  background-image: url(../../../images/pen.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 26px 26px;
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .4s ease;
+  pointer-events: none;
+}
+
+.profile__picture-container:hover.profile__picture-container::before {
+  opacity: 1;
+  visibility: visible;
+}

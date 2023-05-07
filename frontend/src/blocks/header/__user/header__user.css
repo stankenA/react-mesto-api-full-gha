@@ -1,0 +1,16 @@
+.header__user {
+  display: flex;
+}
+
+@media screen and (max-width: 450px) {
+  .header__user {
+    position: absolute;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(84, 84, 84, .7);
+  }
+}

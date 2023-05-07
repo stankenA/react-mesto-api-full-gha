@@ -1,0 +1,15 @@
+.popup__input-error {
+  display: none;
+  max-width: 358px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FF0000;
+  position: absolute;
+  top: 94px;
+  left: 0;
+}
+
+.popup__input-error:first-of-type {
+  top: 37px;
+}

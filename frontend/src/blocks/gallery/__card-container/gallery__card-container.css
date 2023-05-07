@@ -1,0 +1,22 @@
+.gallery__card-container {
+  margin-top: 25px;
+  padding-bottom: 31px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 246px;
+}
+
+
+@media screen and (max-width: 450px) {
+
+  .gallery__card-container {
+    padding-bottom: 25px;
+  }
+}

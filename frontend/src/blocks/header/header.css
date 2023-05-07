@@ -1,0 +1,22 @@
+.header {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  width: calc(100% - 38px);
+  transition: all .4s ease;
+}
+
+@media screen and (max-width: 450px) {
+
+  .header {
+    width: 100%;
+    margin-top: -143px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 40px;
+    padding-bottom: 27px;
+  }
+
+  .header_menu-opened {
+    margin-top: 0;
+  }
+}

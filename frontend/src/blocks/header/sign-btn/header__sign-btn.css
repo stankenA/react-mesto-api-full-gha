@@ -1,0 +1,12 @@
+.header__sign-btn {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+  text-decoration: none;
+  transition: all .4s ease;
+}
+
+.header__sign-btn:hover {
+  opacity: .6;
+}
