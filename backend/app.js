@@ -14,12 +14,6 @@ app.use(express.urlencoded({ extended: true })); // для приёма веб-�
 
 mongoose.connect('mongodb://localhost:27017/mestodb', {
   family: 4,
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  serverSelectionTimeoutMS: 5000,
-  autoIndex: false,
-  maxPoolSize: 10,
-  socketTimeoutMS: 45000,
 });
 
 app.use(requestLogger);
