@@ -1,4 +1,4 @@
-const { allowedCors } = require('../utils/constants');
+// const { allowedCors } = require('../utils/constants');
 
 module.exports = (req, res, next) => {
   const { origin } = req.headers; // Сохраняем источник запроса в переменную origin
@@ -10,10 +10,12 @@ module.exports = (req, res, next) => {
   const requestHeaders = req.headers['access-control-request-headers'];
 
   // проверяем, что источник запроса есть среди разрешённых
-  if (allowedCors.includes(origin)) {
-    // устанавливаем заголовок, который разрешает браузеру запросы с этого источника
-    res.header('Access-Control-Allow-Origin', origin);
-  }
+  // if (allowedCors.includes(origin)) {
+  //   // устанавливаем заголовок, который разрешает браузеру запросы с этого источника
+  //   res.header('Access-Control-Allow-Origin', origin);
+  // }
+
+  res.header('Access-Control-Allow-Origin', origin);
 
   if (method === 'OPTIONS') {
     // разрешаем кросс-доменные запросы любых типов (по умолчанию)
