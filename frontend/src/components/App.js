@@ -9,7 +9,7 @@ import EditProfilePopup from './EditProfilePopup';
 import EditAvatarPopup from './EditAvatarPopup';
 import AddPlacePopup from './AddPlacePopup';
 import InfoTooltip from './InfoTooltip';
-import { api } from '../utilis/api';
+import Api from '../utilis/api';
 import { UserContext } from '../contexts/CurrentUserContext';
 import ProtectedRoute from './ProtectedRoute';
 import Login from './Login';
@@ -45,6 +45,15 @@ function App() {
 
   // Стейт массива карт
   const [cards, setCards] = useState([]);
+
+  // API
+  const api = new Api({
+    url: 'http://api.stankena-mesto.nomoredomains.monster',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${localStorage.getItem('jwt')}`
+    }
+  })
 
   // Проверка токена пользователя
   function handleTokenCheck() {
