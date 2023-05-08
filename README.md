@@ -6,7 +6,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 51.250.78.165
+IP 51.250.78.165
 
 Frontend https://stankena-mesto.nomoredomains.monster
 
