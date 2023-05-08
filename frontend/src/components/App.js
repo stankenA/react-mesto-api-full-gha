@@ -46,25 +46,6 @@ function App() {
   // Стейт массива карт
   const [cards, setCards] = useState([]);
 
-  // Получаем информацию о пользователе и массиве карт,
-  // записываем их значения в стейт-переменные
-
-  useEffect(() => {
-    if (loggedIn) {
-      api.receiveUserInfo()
-        .then((userData) => {
-          setCurrentUser(userData);
-        })
-        .catch(err => console.log(err));
-
-      api.getInitialCards()
-        .then((cardsData) => {
-          setCards(cardsData)
-        })
-        .catch(err => console.log(err));
-    }
-  }, [loggedIn])
-
   // Проверка токена пользователя
   function handleTokenCheck() {
     const jwt = localStorage.getItem('jwt');
@@ -84,6 +65,27 @@ function App() {
   useEffect(() => {
     handleTokenCheck();
   }, [loggedIn])
+
+
+  // Получаем информацию о пользователе и массиве карт,
+  // записываем их значения в стейт-переменные
+  useEffect(() => {
+    if (loggedIn) {
+      api.receiveUserInfo()
+        .then((userData) => {
+          setCurrentUser(userData);
+        })
+        .catch(err => console.log(err));
+
+      api.getInitialCards()
+        .then((cardsData) => {
+          setCards(cardsData)
+        })
+        .catch(err => console.log(err));
+    }
+
+  }, [loggedIn])
+
 
   // Регистрация пользователя
   function handleRegistration(password, email, clearForm) {
