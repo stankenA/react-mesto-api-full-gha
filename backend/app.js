@@ -17,12 +17,6 @@ mongoose.connect('mongodb://localhost:27017/mestodb');
 app.use(requestLogger);
 app.use(cors);
 
-app.get('/crash-test', () => {
-  setTimeout(() => {
-    throw new Error('Сервер сейчас упадёт');
-  }, 0);
-});
-
 app.use('/', routes);
 
 app.use(errorLogger);

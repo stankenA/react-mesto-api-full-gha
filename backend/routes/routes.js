@@ -12,6 +12,12 @@ const {
   validationForRegistration,
 } = require('../validation/auth');
 
+router.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
+
 router.post('/signin', validationForLogin, login);
 router.post('/signup', validationForRegistration, createUser);
 
