@@ -56,6 +56,7 @@ function App() {
           setCurrentUser(userData);
         })
         .catch(err => console.log(err));
+
       api.getInitialCards()
         .then((cardsData) => {
           setCards(cardsData)

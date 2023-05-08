@@ -12,9 +12,7 @@ const app = express();
 app.use(express.json()); // для сборки JSON-формата
 app.use(express.urlencoded({ extended: true })); // для приёма веб-страниц внутри POST-запроса
 
-mongoose.connect('mongodb://localhost:27017/mestodb', {
-  family: 4,
-});
+mongoose.connect('mongodb://localhost:27017/mestodb');
 
 app.use(requestLogger);
 app.use(cors);
