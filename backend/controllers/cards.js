@@ -14,8 +14,12 @@ const createCard = (req, res, next) => {
   const { name, link } = req.body;
 
   Card.create({ name, link, owner: req.user._id })
-    .populate(['owner', 'likes'])
-    .then((newCard) => res.status(201).send(newCard))
+    .then((newCard) => {
+      Card.findOne(newCard)
+        .populate(['owner', 'likes'])
+        .then((card) => res.status(201).send(card))
+        .catch(next);
+    })
     .catch((err) => {
       if (err.name === 'ValidationError') {
         next(new BadRequestError('Некорректно переданы данные новой карточки'));
