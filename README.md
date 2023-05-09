@@ -4,7 +4,7 @@
 
 Адрес репозитория: https://github.com/stankenA/react-mesto-api-full-gha
 
-## Ссылки на проект
+## Ссылки на проект:
 
 IP 51.250.78.165
 
