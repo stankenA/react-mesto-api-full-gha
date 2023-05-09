@@ -48,7 +48,7 @@ function App() {
 
   // API
   const api = new Api({
-    url: 'http://api.stankena-mesto.nomoredomains.monster',
+    url: 'https://api.stankena-mesto.nomoredomains.monster',
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${localStorage.getItem('jwt')}`

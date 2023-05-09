@@ -14,6 +14,7 @@ const createCard = (req, res, next) => {
   const { name, link } = req.body;
 
   Card.create({ name, link, owner: req.user._id })
+    .populate(['owner', 'likes'])
     .then((newCard) => res.status(201).send(newCard))
     .catch((err) => {
       if (err.name === 'ValidationError') {
@@ -38,7 +39,7 @@ const deleteCard = (req, res, next) => {
         throw new ForbiddenError('Нельзя удалять чужие карточки');
       }
 
-      Card.deleteOne()
+      card.deleteOne()
         .then(() => {
           res.send({ message: 'Карточка успешно удалена' });
         })

@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://api.stankena-mesto.nomoredomains.monster';
+export const BASE_URL = 'https://api.stankena-mesto.nomoredomains.monster';
 
 function checkResponse(res) {
   if (res.ok) {
